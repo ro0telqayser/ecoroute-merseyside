@@ -1,0 +1,166 @@
+.journey-section {
+    width: 100%;
+    padding: 0 64px;
+    margin-top: -70px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .journey-card {
+    max-width: 1380px;
+    margin: 0 auto;
+  
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 22px;
+    padding: 24px;
+  
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(6, 59, 34, 0.08);
+  }
+  
+  .journey-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    margin: 0 0 20px;
+    color: #063b22;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  .journey-form {
+    display: grid;
+    grid-template-columns: 1.4fr 1.4fr 1fr 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+  }
+  
+  .journey-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .journey-field span {
+    color: #2f4f3a;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  
+  .journey-input-box {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    background: #f7f1e4;
+    border: 1px solid #dfe8d7;
+    border-radius: 12px;
+    padding: 0 14px;
+  
+    color: #31583d;
+  }
+  
+  .journey-input-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+  
+    color: #063b22;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .journey-input-box input::placeholder {
+    color: #7b8f81;
+  }
+  
+  .journey-search-button {
+    height: 52px;
+    border: none;
+    border-radius: 12px;
+  
+    background: #063b22;
+    color: white;
+  
+    padding: 0 22px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .journey-search-button:hover {
+    background: #0b4c2d;
+  }
+  
+  .journey-eco-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  
+    margin: 20px 0 0;
+    color: #4f7d57;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .journey-input-box select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+  
+    color: #063b22;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .journey-form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .journey-search-button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .journey-section {
+      padding: 0 20px;
+      margin-top: -35px;
+    }
+  
+    .journey-card {
+      padding: 22px;
+      border-radius: 20px;
+    }
+  
+    .journey-form {
+      grid-template-columns: 1fr;
+    }
+  
+    .journey-input-box,
+    .journey-search-button {
+      height: 54px;
+    }
+  
+    .journey-eco-message {
+      align-items: flex-start;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }

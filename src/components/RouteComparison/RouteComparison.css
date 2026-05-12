@@ -1,0 +1,230 @@
+.route-section {
+  width: 100%;
+  background: #f7f1e4;
+  padding: 64px 64px 70px;
+}
+
+.route-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.route-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.route-section-title {
+  margin: 0 0 28px;
+  color: #102017;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.route-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.route-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.94);
+  border: 2px solid transparent;
+  border-radius: 22px;
+  padding: 24px;
+  min-height: 210px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.route-card:hover {
+  transform: translateY(-6px);
+  border-color: #9bcf62;
+  /* box-shadow: 0 24px 55px rgba(6, 59, 34, 0.14); */
+}
+
+
+.selected-route {
+  border-color: #4f8f3a;
+  box-shadow: 0 26px 60px rgba(6, 59, 34, 0.16);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -2px;
+  right: 22px;
+  background: #4f8f3a;
+  color: white;
+  padding: 9px 22px;
+  border-radius: 0 0 16px 16px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.route-card-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.route-icon {
+  color: #102017;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-card h3 {
+  margin: 0;
+  color: #102017;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.route-divider {
+  height: 1px;
+  width: 100%;
+  background: #e2ded3;
+  margin: 18px 0;
+}
+
+.route-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.route-metric {
+  padding: 0 18px;
+  border-right: 1px solid #d8d3c7;
+  align-items: start;
+}
+
+.route-metric:first-child {
+  padding-left: 0;
+}
+
+.route-metric:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.route-metric strong {
+  display: block;
+  color: #102017;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  line-height: 1.25; 
+}
+
+.route-metric span {
+  display: block;
+  /* color: #6b6b61; */
+  font-size: 11px;
+  color: #777267;
+  font-weight: 700;
+
+}
+
+.route-metric.points strong {
+  color: #2f8f3c;
+}
+
+.route-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #102017;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .route-section {
+    padding: 56px 32px 60px;
+  }
+
+  .route-card-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .route-card {
+    min-height: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .route-section {
+    padding: 50px 20px;
+  }
+
+  .route-section-title {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  .route-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .route-card-top {
+    gap: 16px;
+  }
+
+  .route-card h3 {
+    font-size: 21px;
+  }
+
+  .route-metrics {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .route-metric {
+    border-right: none;
+    border-bottom: 1px solid #e2ded3;
+    padding: 0 0 14px;
+  }
+
+  .route-metric:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .recommended-badge {
+    position: static;
+    width: fit-content;
+    margin-bottom: 16px;
+    border-radius: 999px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .route-card {
+    padding: 20px;
+  }
+
+  .route-card-top {
+    align-items: flex-start;
+  }
+
+  .route-metric strong {
+    font-size: 21px;
+  }
+
+  .route-bottom {
+    font-size: 15px;
+  }
+}
